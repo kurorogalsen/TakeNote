@@ -1,0 +1,50 @@
+html{
+    --interactive-color: #5f88a3;
+    --text-color: #000000;
+    --success-color: #05ca6e;
+    --secondary-color: #8b0431;
+    --other-color: #000000;
+    --background-color: rgb(255, 255, 255);
+    --placeholder-color: rgb(41, 85, 47);
+}
+::after, ::before, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    color: var(--text-color);
+}
+a, a:hover{
+    text-decoration: none;
+    color: var(--text-color);
+}
+img{
+    max-width: 100%;
+}
+input{
+    outline: none;
+    border: none;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(255, 255, 255, 0);
+    
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: var(--background-color); 
+    border-left: 1px solid var(--interactive-color);
+    border-right: 1px solid var(--interactive-color);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--interactive-color); 
+    border-radius: 205px;
+    cursor: pointer;
+}

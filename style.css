@@ -1,0 +1,117 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url(bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    word-wrap: break-word;
+}
+header.container, footer.container{
+    padding: 10px;
+    margin: 0px;
+    background-color: var(--interactive-color);
+    color: white;
+    letter-spacing: 0.05em;
+}
+body>header.container, body>footer.container{
+    position: fixed;
+    left: 0px;
+    z-index: -1;
+}
+body>footer.container{
+   bottom: 0px;
+}
+body>header.container{
+   top: 0px;
+}
+body>main{
+    min-height: 100vh;
+}
+#addIdea{
+    position: fixed;
+    z-index: 1;
+    right: -105%;
+    bottom: 25px;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 0;
+    background-color: white;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+#addIcon{
+    position: fixed;
+    right: 5%;
+    bottom: 50px;
+    z-index: 0;
+    border-radius: 100%;
+    padding: 10px;
+    background-color: var(--interactive-color);
+    width: 65px;
+    height: 65px;
+}
+#addIcon>div{
+    position: relative;
+    width: 15px;
+    height: 45px;
+    background-color: var(--success-color);
+    border-radius: 8px;
+}
+#addIcon>div::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--success-color);
+    z-index: 10;
+    transform: rotate(90deg) translate(0%, 0%);
+    border-radius: 8px;
+    left: 0%;
+    bottom: 0%;
+}
+#addIcon:hover{
+    cursor: pointer;
+}
+.card{
+    border-radius: 25px;
+    border: 1px solid var(--interactive-color);
+    height: max-content;
+    margin: 10px;
+    word-wrap: break-word;
+}
+.card>header, #addIdea>form>header{
+    background-color: var(--interactive-color);
+    color: white;
+    border-radius: 25px 25px 0 0;
+    border: 2px solid var(--interactive-color);
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    word-break: break-all;
+
+}
+.card>main{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.575);
+    border-radius: 0 0 25px 25px;
+}
+input.container{
+    padding: 8px;
+    margin: 0px;
+    border-bottom: 1px solid var(--interactive-color);
+    background-color: rgba(255, 255, 255, 0.575);
+
+}
+.btn-success{
+    background-color: var(--success-color);
+    border-radius: 0 0 25px 25px;
+    border: 1px solid var(--interactive-color);
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+::placeholder{
+    color: var(--placeholder-color);
+}
